@@ -1,20 +1,20 @@
 #include <iostream>
 #include <math.h> // round()
-
+using namespace std;
 int main(){
 
 	double m, b;
 	
-	std::cout <<"\nm = ";
-	std::cin >>m;
-	std::cout <<"b = ";
-	std::cin >>b;
+	cout <<"\nm = ";
+	cin >>m;
+	cout <<"b = ";
+	cin >>b;
 
 	long int xMin, xMax;
-	std::cout <<"\nx-min = ";
-	std::cin >>xMin;
-	std::cout <<"x-max = ";
-	std::cin >>xMax;
+	cout <<"\nx-min = ";
+	cin >>xMin;
+	cout <<"x-max = ";
+	cin >>xMax;
 
 	// going from highest to lowest
 	if (xMin > xMax) {
@@ -26,29 +26,29 @@ int main(){
 	// print a number of bricks coresponding to the output
 	for (; xMin <= xMax; xMin++) {
 		// print the domain value
-		std::cout <<std::endl <<xMin <<"\t: ";
+		cout <<std::endl <<xMin <<"\t: ";
 		long int range = round(m * xMin + b);
 
 		// print the sign and 
 		if (range == 0) // value is zero
-			std:: cout <<"(0)";
+			cout <<"(0)";
 
 		
 		else if (range > 0) {
 
-			std::cout << "(+) ";
+			cout << "(+) ";
 
 			for (; range > 0; range--)
-				std::cout <<"█";
+				cout <<"█";
 		
 		} else {
-			std::cout << "(-) ";
+			cout << "(-) ";
 
 			for (; range < 0; range++)
-				std::cout <<"█";
+				cout <<"█";
 		}
 
 	}
 
-	std::cout <<std::endl;
+	cout <<std::endl;
 }
